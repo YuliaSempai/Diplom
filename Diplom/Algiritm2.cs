@@ -163,6 +163,14 @@ namespace Diplom
             label22.Text = null;
             label23.Text = null;
             label24.Text = null;
+            label25.Text = null;
+            label26.Text = null;
+            label27.Text = null;
+            label28.Text = null;
+            label29.Text = null;
+            label30.Text = null;
+            label31.Text = null;
+            label32.Text = null;
 
         }
 
@@ -195,7 +203,7 @@ namespace Diplom
                 e.Handled = true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
 
             if (String.IsNullOrEmpty(textBox1.Text))
@@ -223,34 +231,66 @@ namespace Diplom
                 label8.Text = "0";
             else label8.Text = textBox8.Text;
             //
-
+            label1.BackColor = Color.Aqua;
+            await Task.Delay(500);
+            label1.BackColor = Color.Transparent;
             int L1 = Convert.ToInt32(label1.Text);
+            
             int L2 = Convert.ToInt32(label2.Text);
+            label2.BackColor = Color.Aqua;
+            await Task.Delay(500);
+            label2.BackColor = Color.Transparent;
             int L3 = Convert.ToInt32(label3.Text);
+            label3.BackColor = Color.Aqua;
+            await Task.Delay(1000);
+            label3.BackColor = Color.Transparent;
             int L4 = Convert.ToInt32(label4.Text);
+            label4.BackColor = Color.Aqua;
+            await Task.Delay(1000);
+            label4.BackColor = Color.Transparent;
             int L5 = Convert.ToInt32(label5.Text);
+            label5.BackColor = Color.Aqua;
+            await Task.Delay(1000);
+            label5.BackColor = Color.Transparent;
             int L6 = Convert.ToInt32(label6.Text);
+            label6.BackColor = Color.Aqua;
+            await Task.Delay(1000);
+            label6.BackColor = Color.Transparent;
             int L7 = Convert.ToInt32(label7.Text);
+            label7.BackColor = Color.Aqua;
+            await Task.Delay(1000);
+            label7.BackColor = Color.Transparent;
             int L8 = Convert.ToInt32(label8.Text);
+            label8.BackColor = Color.Aqua;
+            await Task.Delay(1000);
+            label8.BackColor = Color.Transparent;
 
-           
+            // groupBox2.ForeColor = Color.Yellow;
+            groupBox2.BackColor = Color.MediumSpringGreen;
             if (L1 <= L2)
-            { label9.Text = L1.ToString(); label10.Text = L2.ToString(); }
-            else { label9.Text = L2.ToString(); label10.Text = L1.ToString(); }
+            {
 
+                label9.Text = L1.ToString();
+                label10.Text = L2.ToString();
+            }
+            else { label9.Text = L2.ToString(); label10.Text = L1.ToString(); }
+            groupBox3.BackColor = Color.MediumSpringGreen;
             if (L3 <= L4)
             { label11.Text = L3.ToString(); label12.Text = L4.ToString(); }
             else { label11.Text = L4.ToString(); label12.Text = L3.ToString(); }
-
+            groupBox4.BackColor = Color.MediumSpringGreen;
             if (L5 <= L6)
             { label13.Text = L5.ToString(); label14.Text = L6.ToString(); }
             else { label13.Text = L6.ToString(); label14.Text = L5.ToString(); }
-
+            groupBox5.BackColor = Color.MediumSpringGreen;
             if (L7 <= L8)
             { label15.Text = L7.ToString(); label16.Text = L8.ToString(); }
             else { label15.Text = L8.ToString(); label16.Text = L7.ToString(); }
 
-
+            groupBox2.BackColor = Color.Aquamarine;
+            groupBox3.BackColor = Color.Aquamarine;
+            groupBox4.BackColor = Color.Aquamarine;
+            groupBox5.BackColor = Color.Aquamarine;
             int L9 = Convert.ToInt32(label9.Text);
             int L10 = Convert.ToInt32(label10.Text);
             int L11 = Convert.ToInt32(label11.Text);
@@ -347,21 +387,35 @@ namespace Diplom
                     label23.Text = L13.ToString();
                     label24.Text = L14.ToString();
                 }
-            } 
+            }
+            List<int> arg1 = new List<int>();
+            arg1.Add(int.Parse(label17.Text));
+            arg1.Add(int.Parse(label18.Text));
+            arg1.Add(int.Parse(label19.Text));
+            arg1.Add(int.Parse(label20.Text));
 
-            // nhtnbq rheu 
-            //
-            //
-            //
-            //
-            //
-            //
-            //
-        } 
+            arg1.Add(int.Parse(label21.Text));
+            arg1.Add(int.Parse(label22.Text));
+            arg1.Add(int.Parse(label23.Text));
+            arg1.Add(int.Parse(label24.Text));
+            arg1.Sort();
 
-           
+            label25.Text = arg1[0].ToString();
+            label26.Text = arg1[1].ToString();
+            label27.Text = arg1[2].ToString();
+            label28.Text = arg1[3].ToString();
 
-    private void textBox2_TextChanged_1(object sender, EventArgs e)
+            label29.Text = arg1[4].ToString();
+            label30.Text = arg1[5].ToString();
+            label31.Text = arg1[6].ToString();
+            label32.Text = arg1[7].ToString();
+
+
+        }
+
+
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
         {
             textBox2.MaxLength = 3;
         }
@@ -381,8 +435,15 @@ namespace Diplom
 
         }
 
-       
-  
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Algiritm2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 } 

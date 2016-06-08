@@ -1,6 +1,6 @@
 ﻿namespace Diplom
 {
-    partial class O_nas
+    partial class Histori4
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(O_nas));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
@@ -40,21 +39,18 @@
             this.richTextBox1.Location = new System.Drawing.Point(12, 10);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(760, 340);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "дтдлтррлрврасронавсрмдонкнв\nсдгазшлриморпгшплп\nсгсгнангпггн8н8\nуокоопнонозщошукшо" +
+    "узаьіхкшйукщо\nлвіо мщцкрп\n";
             // 
-            // O_nas
+            // Histori4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 361);
             this.Controls.Add(this.richTextBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "O_nas";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "O_nas";
-            this.Load += new System.EventHandler(this.O_nas_Load);
+            this.Name = "Histori4";
+            this.Text = "Histori4";
             this.ResumeLayout(false);
 
         }

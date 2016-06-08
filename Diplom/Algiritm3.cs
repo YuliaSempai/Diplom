@@ -120,7 +120,12 @@ namespace Diplom
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {                   }
+        {
+            //найти меньшее значение
+            //вывести меньшее значение
+            //заблокировать его
+            // зациклить программу
+        }
 
         
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -209,6 +214,11 @@ namespace Diplom
                 labels[i].Text = textBoxs[i].Text;
             }
 
+        }
+
+        private void Algiritm3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
     }

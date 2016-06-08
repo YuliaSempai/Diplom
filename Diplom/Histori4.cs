@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Diplom
 {
-    public partial class O_nas : Form
+    public partial class Histori4 : Form
     {
-        public O_nas()
+        public Histori4()
         {
             InitializeComponent();
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void O_nas_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

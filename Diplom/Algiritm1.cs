@@ -129,70 +129,69 @@ namespace Diplom
 
         private void button2_Click(object sender, EventArgs e)
         {
-            sortTextBoxValue(this);
+       //     sortTextBoxValue(this);
 
-        }
-        private static String CheckIfNull(String str)
-        {
-            if (String.IsNullOrEmpty(str))
-                str = "0";
-            return str;
+       // }
+       // private static String CheckIfNull(String str)
+       // {
+       //     if (String.IsNullOrEmpty(str))
+       //         str = "0";
+       //     return str;
 
-        }
-       private static void sortTextBoxValue(Control parent)
-        {
-            List<TextBox> textBoxs= new List<TextBox>();
-            List<String> stringlist = new List<String>();
-            List<Label> labels = new List<Label>();
-            foreach (Control c in parent.Controls)
-            {
-                if (c.GetType() == typeof(TextBox))
-                {
-                    c.Text = CheckIfNull(c.Text);
-                    textBoxs.Add((TextBox)c);
-                    stringlist.Add("");
-                }
-                //if (c.GetType() == typeof(Label))
-                //{
-                //    labels.Add((Label)c);
-                   
-                //}
-                if (c.GetType() == typeof(GroupBox))
-                    sortTextBoxValue(c);
-            }
+       // }
+       //private static void sortTextBoxValue(Control parent)
+       // {
+       //     List<TextBox> textBoxs= new List<TextBox>();
+       //     List<String> stringlist = new List<String>();
+       //     List<Label> labels = new List<Label>();
+       //     foreach (Control c in parent.Controls)
+       //     {
+       //         if (c.GetType() == typeof(TextBox))
+       //         {
+       //             c.Text = CheckIfNull(c.Text);
+       //             textBoxs.Add((TextBox)c);
+       //             stringlist.Add("");
+       //         }
+       //         //if (c.GetType() == typeof(Label))
+       //         //{   labels.Add((Label)c);
+       //         //}
+       //         if (c.GetType() == typeof(GroupBox))
+       //             sortTextBoxValue(c);
+       //     }
             
-            fillStrings(stringlist, textBoxs);
-            stringlist = sortStrings(stringlist);
-            //labels = sortLabels(labels);
-            fillLabeles(labels, stringlist);
-            textBoxs = null;
-            labels = null;
-        }
-        void timer_Ticker(object sender , EventArgs e)
-        {
-            labels[i].Text = fillOneLabele(stringList, i);
-        }
+       //     fillStrings(stringlist, textBoxs);
+       //     stringlist = sortStrings(stringlist);
+       //     labels = sortLabels(labels);
+       //     fillLabeles(labels, stringlist);
+       //     textBoxs = null;
+       //     labels = null;
+       // }
+       // //void timer_Ticker(object sender , EventArgs e)
+       // //{
+       // //    labels[i].Text = fillOneLabele(stringList, i);
+       // //}
 
-        private static void fillLabeles(List<Label> labels, List<string> stringList)
-        {
-            for (int i = 0; i < labels.Count; i++)
-            {
-                System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-                
-                timer.Tick += new EventHandler(timer_Ticker(labels, stringList, i, Form.ActiveForm)); // it better tu do this by double Tab Key 
-                timer.Interval = 1;
-                timer.Enabled = true;
-            }
-        }
+       // private static void fillLabeles(List<Label> labels, List<string> stringList)
+       // {
+       //     for (int i = 0; i < labels.Count; i++)
+       //     {
+       //         labels[i].Text = fillOneLabele(stringList, i);
+       //         //System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+
+
+       //         //timer.Interval = 1;
+       //         //timer.Enabled = true;
+       //     }
+       // }
 
         
-        private static string fillOneLabele( List<string> stringList, int number)
-        {
-            for (int i = 0; i < stringList.Count; i++)
-            {   if(number == i)
-                return stringList[i];
-            }
-            return "";
+       // private static string fillOneLabele( List<string> stringList, int number)
+       // {
+       //     for (int i = 0; i < stringList.Count; i++)
+       //     {   if(number == i)
+       //         return stringList[i];
+       //     }
+       //     return "";
         }
 
         private static void fillStrings(List<string> stringlist, List<TextBox> textBoxs)
@@ -204,36 +203,7 @@ namespace Diplom
 
         }
 
-        // private static List<TextBox> sortTextBox(List<TextBox> textBoxs)
-        //{
-        //     for (int i = 1; i < textBoxs.Count; i++)
-        //     {
-        //         int cur = Convert.ToInt32(textBoxs[i].Text);
-        //         int j = i;
-        //         while (j > 0 && cur < Convert.ToInt32(textBoxs[j - 1].Text))
-        //         {
-        //             textBoxs[j].Text = textBoxs[j - 1].Text;
-        //             j--;
-        //         }
-        //         textBoxs[j].Text = cur.ToString();
-        //     }
-        //   return textBoxs;
-        // }
-
-        //private static List<Label> sortLabels(List<Label> labels)
-        //{
-        //    for (int i = 1; i < labels.Count; i++)
-        //    {
-        //        int cur = Convert.ToInt32(labels[i].Text);
-        //        int j = i;
-        //        while (j > 0 && cur < Convert.ToInt32(labels[j - 1].Text))
-        //        {
-        //            labels[j].Text = labels[j - 1].Text;
-        //            j--;
-        //        }
-        //        Thread.Sleep(2000);
-        //        labels[j].Text = cur.ToString();
-        //    }
+       
 
         private static List<string> sortStrings(List<string> Stringlist)
         {
@@ -250,13 +220,7 @@ namespace Diplom
                 Stringlist[j] = cur.ToString();
             }
 
-            //System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
-            //myTimer.Enabled = true;
-            //myTimer.Tick += new EventHandler(TimerEventProcessor);
-
-            //myTimer.Interval = 5000;
-            //myTimer.Start();
-
+        
             return Stringlist;
         }
 
@@ -290,6 +254,14 @@ namespace Diplom
 
         }
 
-       
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Algiritm1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

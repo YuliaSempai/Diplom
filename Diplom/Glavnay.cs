@@ -60,5 +60,26 @@ namespace Diplom
             Algiritm3 A3 = new Algiritm3();
             A3.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Algiritm4 A4 = new Algiritm4();
+            A4.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Algiritm4 A4 = new Algiritm4();
+            A4.ShowDialog();
+            Close();
+
+        }
+
+        private void Glavnay_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -64,6 +64,12 @@
     <Compile Include="Algiritm3.Designer.cs">
       <DependentUpon>Algiritm3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Algiritm4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Algiritm4.Designer.cs">
+      <DependentUpon>Algiritm4.cs</DependentUpon>
+    </Compile>
     <Compile Include="HELP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     <Compile Include="HELP3.Designer.cs">
       <DependentUpon>HELP3.cs</DependentUpon>
     </Compile>
+    <Compile Include="HELP4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HELP4.Designer.cs">
+      <DependentUpon>HELP4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Histori.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,12 @@
     </Compile>
     <Compile Include="Histori3.Designer.cs">
       <DependentUpon>Histori3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Histori4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Histori4.Designer.cs">
+      <DependentUpon>Histori4.cs</DependentUpon>
     </Compile>
     <Compile Include="Nachalo.cs">
       <SubType>Form</SubType>
@@ -141,6 +159,9 @@
     <EmbeddedResource Include="Algiritm3.resx">
       <DependentUpon>Algiritm3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Algiritm4.resx">
+      <DependentUpon>Algiritm4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Glavnay.resx">
       <DependentUpon>Glavnay.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +177,9 @@
     <EmbeddedResource Include="HELP3.resx">
       <DependentUpon>HELP3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HELP4.resx">
+      <DependentUpon>HELP4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Histori.resx">
       <DependentUpon>Histori.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Histori3.resx">
       <DependentUpon>Histori3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Histori4.resx">
+      <DependentUpon>Histori4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nachalo.resx">
       <DependentUpon>Nachalo.cs</DependentUpon>

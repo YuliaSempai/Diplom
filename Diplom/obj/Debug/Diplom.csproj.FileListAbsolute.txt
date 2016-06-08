@@ -20,3 +20,6 @@ C:\Users\Юля\Documents\Диплом\Diplom\Diplom\obj\Debug\Diplom.HELP3.reso
 C:\Users\Юля\Documents\Диплом\Diplom\Diplom\obj\Debug\Diplom.Histori1.resources
 C:\Users\Юля\Documents\Диплом\Diplom\Diplom\obj\Debug\Diplom.Histori2.resources
 C:\Users\Юля\Documents\Диплом\Diplom\Diplom\obj\Debug\Diplom.Histori3.resources
+C:\Users\Юля\Documents\Диплом\Diplom\Diplom\obj\Debug\Diplom.Algiritm4.resources
+C:\Users\Юля\Documents\Диплом\Diplom\Diplom\obj\Debug\Diplom.HELP4.resources
+C:\Users\Юля\Documents\Диплом\Diplom\Diplom\obj\Debug\Diplom.Histori4.resources
