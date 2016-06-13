@@ -119,6 +119,7 @@ namespace Diplom
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Hide();
             Glavnay G = new Glavnay();
             G.ShowDialog();
         }
@@ -171,7 +172,7 @@ namespace Diplom
             label30.Text = null;
             label31.Text = null;
             label32.Text = null;
-
+            groupBox8.BackColor = Color.Aquamarine;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -205,6 +206,14 @@ namespace Diplom
 
         private async void button2_Click(object sender, EventArgs e)
         {
+         
+            button10.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
+            button2.Focus();
+           
 
             if (String.IsNullOrEmpty(textBox1.Text))
                 label1.Text = "0";
@@ -212,85 +221,196 @@ namespace Diplom
             if (String.IsNullOrEmpty(textBox2.Text))
                 label2.Text = "0";
             else label2.Text = textBox2.Text;
+
             if (String.IsNullOrEmpty(textBox3.Text))
                 label3.Text = "0";
             else label3.Text = textBox3.Text;
+
             if (String.IsNullOrEmpty(textBox4.Text))
                 label4.Text = "0";
             else label4.Text = textBox4.Text;
+
             if (String.IsNullOrEmpty(textBox5.Text))
                 label5.Text = "0";
             else label5.Text = textBox5.Text;
+
             if (String.IsNullOrEmpty(textBox6.Text))
                 label6.Text = "0";
             else label6.Text = textBox6.Text;
+
             if (String.IsNullOrEmpty(textBox7.Text))
                 label7.Text = "0";
             else label7.Text = textBox7.Text;
+
             if (String.IsNullOrEmpty(textBox8.Text))
                 label8.Text = "0";
             else label8.Text = textBox8.Text;
-            //
-            label1.BackColor = Color.Aqua;
-            await Task.Delay(500);
-            label1.BackColor = Color.Transparent;
-            int L1 = Convert.ToInt32(label1.Text);
-            
-            int L2 = Convert.ToInt32(label2.Text);
-            label2.BackColor = Color.Aqua;
-            await Task.Delay(500);
-            label2.BackColor = Color.Transparent;
-            int L3 = Convert.ToInt32(label3.Text);
-            label3.BackColor = Color.Aqua;
-            await Task.Delay(1000);
-            label3.BackColor = Color.Transparent;
-            int L4 = Convert.ToInt32(label4.Text);
-            label4.BackColor = Color.Aqua;
-            await Task.Delay(1000);
-            label4.BackColor = Color.Transparent;
-            int L5 = Convert.ToInt32(label5.Text);
-            label5.BackColor = Color.Aqua;
-            await Task.Delay(1000);
-            label5.BackColor = Color.Transparent;
-            int L6 = Convert.ToInt32(label6.Text);
-            label6.BackColor = Color.Aqua;
-            await Task.Delay(1000);
-            label6.BackColor = Color.Transparent;
-            int L7 = Convert.ToInt32(label7.Text);
-            label7.BackColor = Color.Aqua;
-            await Task.Delay(1000);
-            label7.BackColor = Color.Transparent;
-            int L8 = Convert.ToInt32(label8.Text);
-            label8.BackColor = Color.Aqua;
-            await Task.Delay(1000);
-            label8.BackColor = Color.Transparent;
+            ////
 
-            // groupBox2.ForeColor = Color.Yellow;
-            groupBox2.BackColor = Color.MediumSpringGreen;
+            int L1 = Convert.ToInt32(label1.Text);
+            int L2 = Convert.ToInt32(label2.Text);
+            int L3 = Convert.ToInt32(label3.Text);
+            int L4 = Convert.ToInt32(label4.Text);
+            int L5 = Convert.ToInt32(label5.Text);
+            int L6 = Convert.ToInt32(label6.Text);
+            int L7 = Convert.ToInt32(label7.Text);
+            int L8 = Convert.ToInt32(label8.Text);
+            //
+            await Task.Delay(500);
+            label1.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label2.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            groupBox2.BackColor = Color.Lime;
+            label9.BackColor = Color.Lime;
+            label10.BackColor = Color.Lime;
             if (L1 <= L2)
             {
-
+                await Task.Delay(500);
+                label9.ForeColor = Color.Blue;
                 label9.Text = L1.ToString();
+                await Task.Delay(500);
+                label10.ForeColor = Color.Blue;
                 label10.Text = L2.ToString();
-            }
-            else { label9.Text = L2.ToString(); label10.Text = L1.ToString(); }
-            groupBox3.BackColor = Color.MediumSpringGreen;
-            if (L3 <= L4)
-            { label11.Text = L3.ToString(); label12.Text = L4.ToString(); }
-            else { label11.Text = L4.ToString(); label12.Text = L3.ToString(); }
-            groupBox4.BackColor = Color.MediumSpringGreen;
-            if (L5 <= L6)
-            { label13.Text = L5.ToString(); label14.Text = L6.ToString(); }
-            else { label13.Text = L6.ToString(); label14.Text = L5.ToString(); }
-            groupBox5.BackColor = Color.MediumSpringGreen;
-            if (L7 <= L8)
-            { label15.Text = L7.ToString(); label16.Text = L8.ToString(); }
-            else { label15.Text = L8.ToString(); label16.Text = L7.ToString(); }
+                await Task.Delay(500);
 
+            }
+            else
+            {
+                await Task.Delay(500);
+                label9.Text = L2.ToString();
+                label9.ForeColor = Color.Blue;
+                await Task.Delay(500);
+                label10.Text = L1.ToString();
+                label10.ForeColor = Color.Blue;
+                await Task.Delay(500);
+            }
+            await Task.Delay(500);
+            label1.ForeColor = Color.DarkSlateGray;
+            label2.ForeColor = Color.DarkSlateGray;
+            label9.ForeColor = Color.DarkSlateGray;
+            label10.ForeColor = Color.DarkSlateGray;
+            label1.BackColor = Color.Aquamarine;
+            label2.BackColor = Color.Aquamarine;
+            label9.BackColor = Color.Aquamarine;
+            label10.BackColor = Color.Aquamarine;
             groupBox2.BackColor = Color.Aquamarine;
+            //
+            await Task.Delay(500);
+            label3.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label4.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            groupBox3.BackColor = Color.Lime;
+            label11.BackColor = Color.Lime;
+            label12.BackColor = Color.Lime;
+            if (L3 <= L4)
+            {
+                await Task.Delay(500);
+                label11.ForeColor = Color.Blue;
+                label11.Text = L3.ToString();
+                await Task.Delay(500);
+                label12.ForeColor = Color.Blue;
+                label12.Text = L4.ToString();
+            }
+            else
+            {
+                await Task.Delay(500);
+                label11.ForeColor = Color.Blue;
+                label11.Text = L4.ToString();
+                await Task.Delay(500);
+                label12.ForeColor = Color.Blue;
+                label12.Text = L3.ToString();
+            }
+            await Task.Delay(500);
+            label3.ForeColor = Color.DarkSlateGray;
+            label4.ForeColor = Color.DarkSlateGray;
+            label11.ForeColor = Color.DarkSlateGray;
+            label12.ForeColor = Color.DarkSlateGray;
+            label3.BackColor = Color.Aquamarine;
+            label4.BackColor = Color.Aquamarine;
+            label11.BackColor = Color.Aquamarine;
+            label12.BackColor = Color.Aquamarine;
             groupBox3.BackColor = Color.Aquamarine;
+            //
+            await Task.Delay(500);
+            label5.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label6.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            groupBox4.BackColor = Color.Lime;
+            label13.BackColor = Color.Lime;
+            label14.BackColor = Color.Lime;
+            if (L5 <= L6)
+            {
+                await Task.Delay(500);
+                label13.ForeColor = Color.Blue;
+                label13.Text = L5.ToString();
+                await Task.Delay(500);
+                label14.ForeColor = Color.Blue;
+                label14.Text = L6.ToString();
+            }
+            else {
+                await Task.Delay(500);
+                label13.ForeColor = Color.Blue;
+                label13.Text = L6.ToString();
+                await Task.Delay(500);
+                label14.ForeColor = Color.Blue;
+                label14.Text = L5.ToString();
+            }
+            await Task.Delay(500);
+            label5.ForeColor = Color.DarkSlateGray;
+            label6.ForeColor = Color.DarkSlateGray;
+            label13.ForeColor = Color.DarkSlateGray;
+            label14.ForeColor = Color.DarkSlateGray;
+            label5.BackColor = Color.Aquamarine;
+            label6.BackColor = Color.Aquamarine;
+            label13.BackColor = Color.Aquamarine;
+            label14.BackColor = Color.Aquamarine;
             groupBox4.BackColor = Color.Aquamarine;
+            //
+            await Task.Delay(500);
+            label7.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label8.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            groupBox5.BackColor = Color.Lime;
+            label15.BackColor = Color.Lime;
+            label16.BackColor = Color.Lime;
+            if (L7 <= L8)
+            {
+                await Task.Delay(500);
+                label15.ForeColor = Color.Blue;
+                label15.Text = L7.ToString();
+                await Task.Delay(500);
+                label16.ForeColor = Color.Blue;
+                label16.Text = L8.ToString();
+            }
+            else {
+                await Task.Delay(500);
+                label15.ForeColor = Color.Blue;
+                label15.Text = L8.ToString();
+                await Task.Delay(500);
+                label16.ForeColor = Color.Blue;
+                label16.Text = L7.ToString();
+            }
+            await Task.Delay(500);
+            label7.ForeColor = Color.DarkSlateGray;
+            label8.ForeColor = Color.DarkSlateGray;
+            label15.ForeColor = Color.DarkSlateGray;
+            label16.ForeColor = Color.DarkSlateGray;
+            label7.BackColor = Color.Aquamarine;
+            label8.BackColor = Color.Aquamarine;
+            label15.BackColor = Color.Aquamarine;
+            label16.BackColor = Color.Aquamarine;
             groupBox5.BackColor = Color.Aquamarine;
+
+
+            //
+            //
+            //
+            //
+            //
             int L9 = Convert.ToInt32(label9.Text);
             int L10 = Convert.ToInt32(label10.Text);
             int L11 = Convert.ToInt32(label11.Text);
@@ -300,94 +420,277 @@ namespace Diplom
             int L15 = Convert.ToInt32(label15.Text);
             int L16 = Convert.ToInt32(label16.Text);
 
+
+            await Task.Delay(500);
+            label9.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label10.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            await Task.Delay(500);
+            label11.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label12.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            groupBox6.BackColor = Color.Lime;
+            label17.BackColor = Color.Lime;
+            label18.BackColor = Color.Lime;
+            label19.BackColor = Color.Lime;
+            label20.BackColor = Color.Lime;
             if (L9 <= L11)
             {
+                await Task.Delay(500);
+                label17.ForeColor = Color.Blue;
                 label17.Text = L9.ToString();
                 if (L10 <= L11)
                 {
+                    await Task.Delay(500);
+                    label18.ForeColor = Color.Blue;
                     label18.Text = L10.ToString();
+                    await Task.Delay(500);
+                    label19.ForeColor = Color.Blue;
                     label19.Text = L11.ToString();
+                    await Task.Delay(500);
+                    label20.ForeColor = Color.Blue;
                     label20.Text = L12.ToString();
                 }
                 else
                 {
+                    await Task.Delay(500);
+                    label18.ForeColor = Color.Blue;
                     label18.Text = L11.ToString();
+
                     if (L10 <= L12)
                     {
+                        await Task.Delay(500);
+                        label19.ForeColor = Color.Blue;
                         label19.Text = L10.ToString();
+                        await Task.Delay(500);
+                        label20.ForeColor = Color.Blue;
                         label20.Text = L12.ToString();
+                    }
+                    else
+                    {
+                        await Task.Delay(500);
+                        label19.ForeColor = Color.Blue;
+                        label19.Text = L12.ToString();
+                        await Task.Delay(500);
+                        label20.ForeColor = Color.Blue;
+                        label20.Text = L10.ToString();
+                        
                     }
                 }
             }
             else
             {
+                await Task.Delay(500);
+                label17.ForeColor = Color.Blue;
                 label17.Text = L11.ToString();
                 if (L9 <= L12)
                 {
+                    await Task.Delay(500);
+                    label18.ForeColor = Color.Blue;
                     label18.Text = L9.ToString();
                     if (L10 <= L12)
                     {
+                        await Task.Delay(500);
+                        label19.ForeColor = Color.Blue;
                         label19.Text = L10.ToString();
+                        await Task.Delay(500);
+                        label20.ForeColor = Color.Blue;
                         label20.Text = L12.ToString();
                     }
                     else
                     {
+                        await Task.Delay(500);
+                        label19.ForeColor = Color.Blue;
                         label19.Text = L12.ToString();
+                        await Task.Delay(500);
+                        label20.ForeColor = Color.Blue;
                         label20.Text = L10.ToString();
+                        
                     }
                 }
+
+            
+            
                 else
                 {
+                    await Task.Delay(500);
+                    label18.ForeColor = Color.Blue;
                     label18.Text = L12.ToString();
-                    label19.Text = L9.ToString();
+                    await Task.Delay(500);
+                    label19.ForeColor = Color.Blue;
+                    label19.Text = L11.ToString();
+                    await Task.Delay(500);
+                    label20.ForeColor = Color.Blue;
                     label20.Text = L10.ToString();
                 }
             }
+            await Task.Delay(500);
+            label9.ForeColor = Color.DarkSlateGray;
+            label10.ForeColor = Color.DarkSlateGray;
+            label11.ForeColor = Color.DarkSlateGray;
+            label12.ForeColor = Color.DarkSlateGray; 
+            label9.BackColor = Color.Aquamarine;
+            label10.BackColor = Color.Aquamarine;
+            label11.BackColor = Color.Aquamarine;
+            label12.BackColor = Color.Aquamarine;
+            label17.BackColor = Color.Aquamarine;
+            label18.BackColor = Color.Aquamarine;
+            label19.BackColor = Color.Aquamarine;
+            label20.BackColor = Color.Aquamarine;
+            groupBox6.BackColor = Color.Aquamarine;
+            label17.ForeColor = Color.DarkSlateGray;
+            label18.ForeColor = Color.DarkSlateGray;
+            label19.ForeColor = Color.DarkSlateGray;
+            label20.ForeColor = Color.DarkSlateGray;
 
 
+
+
+
+
+
+            //
+            await Task.Delay(500);
+            label13.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label14.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            await Task.Delay(500);
+            label15.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label16.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            groupBox7.BackColor = Color.Lime;
+            label21.BackColor = Color.Lime;
+            label22.BackColor = Color.Lime;
+            label23.BackColor = Color.Lime;
+            label24.BackColor = Color.Lime;
             if (L13 <= L15)
             {
+                await Task.Delay(500);
+                label21.ForeColor = Color.Blue;
                 label21.Text = L13.ToString();
                 if (L14 <= L15)
                 {
+                    await Task.Delay(500);
+                    label22.ForeColor = Color.Blue;
                     label22.Text = L14.ToString();
+                    await Task.Delay(500);
+                    label23.ForeColor = Color.Blue;
                     label23.Text = L15.ToString();
+                    await Task.Delay(500);
+                    label24.ForeColor = Color.Blue;
                     label24.Text = L16.ToString();
                 }
                 else
                 {
+                    await Task.Delay(500);
+                    label22.ForeColor = Color.Blue;
                     label22.Text = L15.ToString();
                     if (L14 <= L16)
                     {
+                        await Task.Delay(500);
+                        label23.ForeColor = Color.Blue;
                         label23.Text = L14.ToString();
+                        await Task.Delay(500);
+                        label24.ForeColor = Color.Blue;
                         label24.Text = L16.ToString();
+                    }
+                    else
+                    {
+                        await Task.Delay(500);
+                        label23.ForeColor = Color.Blue;
+                        label23.Text = L16.ToString();
+                        await Task.Delay(500);
+                        label24.ForeColor = Color.Blue;
+                        label24.Text = L14.ToString();
                     }
                 }
             }
             else
             {
+                await Task.Delay(500);
+                label21.ForeColor = Color.Blue;
                 label21.Text = L15.ToString();
                 if (L13 <= L16)
                 {
+                    await Task.Delay(500);
+                    label22.ForeColor = Color.Blue;
                     label22.Text = 139.ToString();
                     if (L14 <= L16)
                     {
+                        await Task.Delay(500);
+                        label23.ForeColor = Color.Blue;
                         label23.Text = L14.ToString();
+                        await Task.Delay(500);
+                        label24.ForeColor = Color.Blue;
                         label24.Text = L16.ToString();
                     }
                     else
                     {
-                        label13.Text = L16.ToString();
+                        await Task.Delay(500);
+                        label23.ForeColor = Color.Blue;
+                        label23.Text = L16.ToString();
+                        await Task.Delay(500);
                         label24.Text = L14.ToString();
                     }
                 }
                 else
                 {
+                    await Task.Delay(500);
                     label22.Text = L16.ToString();
+                    label22.ForeColor = Color.Blue;
+                    await Task.Delay(500);
+                    label23.ForeColor = Color.Blue;
                     label23.Text = L13.ToString();
+                    await Task.Delay(500);
+                    label24.ForeColor = Color.Blue;
                     label24.Text = L14.ToString();
                 }
             }
+            await Task.Delay(500);
+            label13.ForeColor = Color.DarkSlateGray;
+            label14.ForeColor = Color.DarkSlateGray;
+            label15.ForeColor = Color.DarkSlateGray;
+            label16.ForeColor = Color.DarkSlateGray;
+            label13.BackColor = Color.Aquamarine;
+            label14.BackColor = Color.Aquamarine;
+            label15.BackColor = Color.Aquamarine;
+            label16.BackColor = Color.Aquamarine;
+            label21.BackColor = Color.Aquamarine;
+            label22.BackColor = Color.Aquamarine;
+            label23.BackColor = Color.Aquamarine;
+            label24.BackColor = Color.Aquamarine;
+            groupBox7.BackColor = Color.Aquamarine;
+            label21.ForeColor = Color.DarkSlateGray;
+            label22.ForeColor = Color.DarkSlateGray;
+            label23.ForeColor = Color.DarkSlateGray;
+            label24.ForeColor = Color.DarkSlateGray;
+            //
+            //
+            //
+            await Task.Delay(500);
+
+            label17.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label18.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label19.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label20.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label21.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label22.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label23.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            label24.BackColor = Color.Yellow;
+            await Task.Delay(500);
+            groupBox8.BackColor = Color.Lime;
+
             List<int> arg1 = new List<int>();
             arg1.Add(int.Parse(label17.Text));
             arg1.Add(int.Parse(label18.Text));
@@ -399,17 +702,52 @@ namespace Diplom
             arg1.Add(int.Parse(label23.Text));
             arg1.Add(int.Parse(label24.Text));
             arg1.Sort();
-
+            await Task.Delay(500);
+            label25.ForeColor = Color.Blue;
             label25.Text = arg1[0].ToString();
+            await Task.Delay(500);
+            label26.ForeColor = Color.Blue;
             label26.Text = arg1[1].ToString();
+            await Task.Delay(500);
+            label27.ForeColor = Color.Blue;
             label27.Text = arg1[2].ToString();
+            await Task.Delay(500);
+            label28.ForeColor = Color.Blue;
             label28.Text = arg1[3].ToString();
-
+            await Task.Delay(500);
+            label29.ForeColor = Color.Blue;
             label29.Text = arg1[4].ToString();
+            await Task.Delay(500);
+            label30.ForeColor = Color.Blue;
             label30.Text = arg1[5].ToString();
+            await Task.Delay(500);
+            label31.ForeColor = Color.Blue;
             label31.Text = arg1[6].ToString();
+            await Task.Delay(500);
+            label32.ForeColor = Color.Blue;
             label32.Text = arg1[7].ToString();
 
+            await Task.Delay(500);
+            label25.ForeColor = Color.DarkSlateGray;
+            label26.ForeColor = Color.DarkSlateGray;
+            label27.ForeColor = Color.DarkSlateGray;
+            label28.ForeColor = Color.DarkSlateGray;
+            label29.ForeColor = Color.DarkSlateGray;
+            label30.ForeColor = Color.DarkSlateGray;
+            label31.ForeColor = Color.DarkSlateGray;
+            label32.ForeColor = Color.DarkSlateGray;
+
+            label17.BackColor = Color.Aquamarine;
+            label18.BackColor = Color.Aquamarine;
+            label19.BackColor = Color.Aquamarine;
+            label20.BackColor = Color.Aquamarine;
+            label21.BackColor = Color.Aquamarine;
+            label22.BackColor = Color.Aquamarine;
+            label23.BackColor = Color.Aquamarine;
+            label24.BackColor = Color.Aquamarine;
+
+            groupBox8.BackColor = Color.Orange;
+          
 
         }
 

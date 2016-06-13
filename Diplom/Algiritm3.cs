@@ -23,8 +23,7 @@ namespace Diplom
             Hide();
             Glavnay G = new Glavnay();
             G.ShowDialog();
-            Close();
-
+            
         }
 
         private void button5_Click(object sender, EventArgs e)

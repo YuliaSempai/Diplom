@@ -22,7 +22,7 @@ namespace Diplom
         {
             Hide();
             Glavnay G = new Glavnay();
-            G.Show();
+            G.ShowDialog();
           
         }
 

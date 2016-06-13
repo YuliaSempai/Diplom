@@ -54,6 +54,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -89,6 +90,7 @@
             this.button2.TabIndex = 38;
             this.button2.Text = "Запуск";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
@@ -149,6 +151,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Aquamarine;
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox5);
@@ -169,6 +172,7 @@
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Як пацює алгортим:";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox3
             // 
@@ -332,6 +336,15 @@
             this.textBox3.Size = new System.Drawing.Size(100, 36);
             this.textBox3.TabIndex = 19;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(540, 159);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 28);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "label7";
+            // 
             // Algiritm4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,5 +410,6 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label7;
     }
 }
