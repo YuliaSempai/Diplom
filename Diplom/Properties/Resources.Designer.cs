@@ -63,9 +63,79 @@ namespace Diplom.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _220px_Merge_sort_animation2 {
+            get {
+                object obj = ResourceManager.GetObject("220px-Merge_sort_animation2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _220px_Merge_sort_animation2_2 {
+            get {
+                object obj = ResourceManager.GetObject("220px-Merge_sort_animation2_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _280px_Insertion_sort_example_300px_1 {
+            get {
+                object obj = ResourceManager.GetObject("280px-Insertion-sort-example-300px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bubble_sort_example_300px {
+            get {
+                object obj = ResourceManager.GetObject("Bubble-sort-example-300px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap insertion_sort_o {
+            get {
+                object obj = ResourceManager.GetObject("insertion-sort-o", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Бубл {
+            get {
+                object obj = ResourceManager.GetObject("Бубл", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Начало {
             get {
                 object obj = ResourceManager.GetObject("Начало", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана (8)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

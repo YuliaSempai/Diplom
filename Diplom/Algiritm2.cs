@@ -25,9 +25,7 @@ namespace Diplom
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
         }
-
 
         private void textBox2_KeyPress_1(object sender, KeyPressEventArgs e)
         {
@@ -107,7 +105,6 @@ namespace Diplom
 
         private void label3_Click(object sender, EventArgs e)
         {
-
         }
         private void button5_Click(object sender, EventArgs e)
         {
@@ -187,7 +184,6 @@ namespace Diplom
             num6 = RandomClass.Next(1, 49);
             num7 = RandomClass.Next(1, 49);
             num8 = RandomClass.Next(1, 49);
-
             textBox1.Text = num1.ToString();
             textBox2.Text = num2.ToString();
             textBox3.Text = num3.ToString();
@@ -206,47 +202,36 @@ namespace Diplom
 
         private async void button2_Click(object sender, EventArgs e)
         {
-         
             button10.Enabled = false;
             button2.Enabled = false;
             button3.Enabled = false;
             button4.Enabled = false;
             button5.Enabled = false;
             button2.Focus();
-           
-
             if (String.IsNullOrEmpty(textBox1.Text))
                 label1.Text = "0";
             else label1.Text = textBox1.Text;
             if (String.IsNullOrEmpty(textBox2.Text))
                 label2.Text = "0";
             else label2.Text = textBox2.Text;
-
             if (String.IsNullOrEmpty(textBox3.Text))
                 label3.Text = "0";
             else label3.Text = textBox3.Text;
-
             if (String.IsNullOrEmpty(textBox4.Text))
                 label4.Text = "0";
             else label4.Text = textBox4.Text;
-
             if (String.IsNullOrEmpty(textBox5.Text))
                 label5.Text = "0";
             else label5.Text = textBox5.Text;
-
             if (String.IsNullOrEmpty(textBox6.Text))
                 label6.Text = "0";
             else label6.Text = textBox6.Text;
-
             if (String.IsNullOrEmpty(textBox7.Text))
                 label7.Text = "0";
             else label7.Text = textBox7.Text;
-
             if (String.IsNullOrEmpty(textBox8.Text))
                 label8.Text = "0";
             else label8.Text = textBox8.Text;
-            ////
-
             int L1 = Convert.ToInt32(label1.Text);
             int L2 = Convert.ToInt32(label2.Text);
             int L3 = Convert.ToInt32(label3.Text);
@@ -255,7 +240,6 @@ namespace Diplom
             int L6 = Convert.ToInt32(label6.Text);
             int L7 = Convert.ToInt32(label7.Text);
             int L8 = Convert.ToInt32(label8.Text);
-            //
             await Task.Delay(500);
             label1.BackColor = Color.Yellow;
             await Task.Delay(500);
@@ -273,7 +257,6 @@ namespace Diplom
                 label10.ForeColor = Color.Blue;
                 label10.Text = L2.ToString();
                 await Task.Delay(500);
-
             }
             else
             {
@@ -295,7 +278,6 @@ namespace Diplom
             label9.BackColor = Color.Aquamarine;
             label10.BackColor = Color.Aquamarine;
             groupBox2.BackColor = Color.Aquamarine;
-            //
             await Task.Delay(500);
             label3.BackColor = Color.Yellow;
             await Task.Delay(500);
@@ -332,7 +314,6 @@ namespace Diplom
             label11.BackColor = Color.Aquamarine;
             label12.BackColor = Color.Aquamarine;
             groupBox3.BackColor = Color.Aquamarine;
-            //
             await Task.Delay(500);
             label5.BackColor = Color.Yellow;
             await Task.Delay(500);
@@ -368,7 +349,6 @@ namespace Diplom
             label13.BackColor = Color.Aquamarine;
             label14.BackColor = Color.Aquamarine;
             groupBox4.BackColor = Color.Aquamarine;
-            //
             await Task.Delay(500);
             label7.BackColor = Color.Yellow;
             await Task.Delay(500);
@@ -404,13 +384,6 @@ namespace Diplom
             label15.BackColor = Color.Aquamarine;
             label16.BackColor = Color.Aquamarine;
             groupBox5.BackColor = Color.Aquamarine;
-
-
-            //
-            //
-            //
-            //
-            //
             int L9 = Convert.ToInt32(label9.Text);
             int L10 = Convert.ToInt32(label10.Text);
             int L11 = Convert.ToInt32(label11.Text);
@@ -419,8 +392,6 @@ namespace Diplom
             int L14 = Convert.ToInt32(label14.Text);
             int L15 = Convert.ToInt32(label15.Text);
             int L16 = Convert.ToInt32(label16.Text);
-
-
             await Task.Delay(500);
             label9.BackColor = Color.Yellow;
             await Task.Delay(500);
@@ -476,7 +447,6 @@ namespace Diplom
                         await Task.Delay(500);
                         label20.ForeColor = Color.Blue;
                         label20.Text = L10.ToString();
-                        
                     }
                 }
             }
@@ -507,12 +477,8 @@ namespace Diplom
                         await Task.Delay(500);
                         label20.ForeColor = Color.Blue;
                         label20.Text = L10.ToString();
-                        
-                    }
+                     }
                 }
-
-            
-            
                 else
                 {
                     await Task.Delay(500);
@@ -544,14 +510,6 @@ namespace Diplom
             label18.ForeColor = Color.DarkSlateGray;
             label19.ForeColor = Color.DarkSlateGray;
             label20.ForeColor = Color.DarkSlateGray;
-
-
-
-
-
-
-
-            //
             await Task.Delay(500);
             label13.BackColor = Color.Yellow;
             await Task.Delay(500);
@@ -668,11 +626,7 @@ namespace Diplom
             label22.ForeColor = Color.DarkSlateGray;
             label23.ForeColor = Color.DarkSlateGray;
             label24.ForeColor = Color.DarkSlateGray;
-            //
-            //
-            //
             await Task.Delay(500);
-
             label17.BackColor = Color.Yellow;
             await Task.Delay(500);
             label18.BackColor = Color.Yellow;
@@ -690,13 +644,11 @@ namespace Diplom
             label24.BackColor = Color.Yellow;
             await Task.Delay(500);
             groupBox8.BackColor = Color.Lime;
-
             List<int> arg1 = new List<int>();
             arg1.Add(int.Parse(label17.Text));
             arg1.Add(int.Parse(label18.Text));
             arg1.Add(int.Parse(label19.Text));
             arg1.Add(int.Parse(label20.Text));
-
             arg1.Add(int.Parse(label21.Text));
             arg1.Add(int.Parse(label22.Text));
             arg1.Add(int.Parse(label23.Text));
@@ -726,7 +678,6 @@ namespace Diplom
             await Task.Delay(500);
             label32.ForeColor = Color.Blue;
             label32.Text = arg1[7].ToString();
-
             await Task.Delay(500);
             label25.ForeColor = Color.DarkSlateGray;
             label26.ForeColor = Color.DarkSlateGray;
@@ -736,7 +687,6 @@ namespace Diplom
             label30.ForeColor = Color.DarkSlateGray;
             label31.ForeColor = Color.DarkSlateGray;
             label32.ForeColor = Color.DarkSlateGray;
-
             label17.BackColor = Color.Aquamarine;
             label18.BackColor = Color.Aquamarine;
             label19.BackColor = Color.Aquamarine;
@@ -745,13 +695,13 @@ namespace Diplom
             label22.BackColor = Color.Aquamarine;
             label23.BackColor = Color.Aquamarine;
             label24.BackColor = Color.Aquamarine;
-
             groupBox8.BackColor = Color.Orange;
-          
-
+            button10.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            button4.Enabled = true;
+            button5.Enabled = true;
         }
-
-
 
         private void textBox2_TextChanged_1(object sender, EventArgs e)
         {
@@ -760,28 +710,43 @@ namespace Diplom
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Algiritm2_Load(object sender, EventArgs e)
         {
-
         }
 
         private void label19_Click(object sender, EventArgs e)
         {
-
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
         }
 
         private void Algiritm2_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
-    }
 
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+    }
 } 

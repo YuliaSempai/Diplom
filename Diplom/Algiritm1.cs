@@ -127,72 +127,132 @@ namespace Diplom
             textBox6.Text = num6.ToString();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+        private async void button2_Click(object sender, EventArgs e)
+        { 
+
        //     sortTextBoxValue(this);
 
-       // }
-       // private static String CheckIfNull(String str)
-       // {
-       //     if (String.IsNullOrEmpty(str))
-       //         str = "0";
-       //     return str;
+            // }
+            // private static String CheckIfNull(String str)
+            // {
+            //     if (String.IsNullOrEmpty(str))
+            //         str = "0";
+            //     return str;
 
-       // }
-       //private static void sortTextBoxValue(Control parent)
-       // {
-       //     List<TextBox> textBoxs= new List<TextBox>();
-       //     List<String> stringlist = new List<String>();
-       //     List<Label> labels = new List<Label>();
-       //     foreach (Control c in parent.Controls)
-       //     {
-       //         if (c.GetType() == typeof(TextBox))
-       //         {
-       //             c.Text = CheckIfNull(c.Text);
-       //             textBoxs.Add((TextBox)c);
-       //             stringlist.Add("");
-       //         }
-       //         //if (c.GetType() == typeof(Label))
-       //         //{   labels.Add((Label)c);
-       //         //}
-       //         if (c.GetType() == typeof(GroupBox))
-       //             sortTextBoxValue(c);
-       //     }
-            
-       //     fillStrings(stringlist, textBoxs);
-       //     stringlist = sortStrings(stringlist);
-       //     labels = sortLabels(labels);
-       //     fillLabeles(labels, stringlist);
-       //     textBoxs = null;
-       //     labels = null;
-       // }
-       // //void timer_Ticker(object sender , EventArgs e)
-       // //{
-       // //    labels[i].Text = fillOneLabele(stringList, i);
-       // //}
+            // }
+            //private static void sortTextBoxValue(Control parent)
+            // {
+            //     List<TextBox> textBoxs= new List<TextBox>();
+            //     List<String> stringlist = new List<String>();
+            //     List<Label> labels = new List<Label>();
+            //     foreach (Control c in parent.Controls)
+            //     {
+            //         if (c.GetType() == typeof(TextBox))
+            //         {
+            //             c.Text = CheckIfNull(c.Text);
+            //             textBoxs.Add((TextBox)c);
+            //             stringlist.Add("");
+            //         }
+            //         //if (c.GetType() == typeof(Label))
+            //         //{   labels.Add((Label)c);
+            //         //}
+            //         if (c.GetType() == typeof(GroupBox))
+            //             sortTextBoxValue(c);
+            //     }
 
-       // private static void fillLabeles(List<Label> labels, List<string> stringList)
-       // {
-       //     for (int i = 0; i < labels.Count; i++)
-       //     {
-       //         labels[i].Text = fillOneLabele(stringList, i);
-       //         //System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            //     fillStrings(stringlist, textBoxs);
+            //     stringlist = sortStrings(stringlist);
+            //     labels = sortLabels(labels);
+            //     fillLabeles(labels, stringlist);
+            //     textBoxs = null;
+            //     labels = null;
+            // }
+            // //void timer_Ticker(object sender , EventArgs e)
+            // //{
+            // //    labels[i].Text = fillOneLabele(stringList, i);
+            // //}
+
+            // private static void fillLabeles(List<Label> labels, List<string> stringList)
+            // {
+            //     for (int i = 0; i < labels.Count; i++)
+            //     {
+            //         labels[i].Text = fillOneLabele(stringList, i);
+            //         //System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
 
 
-       //         //timer.Interval = 1;
-       //         //timer.Enabled = true;
-       //     }
-       // }
+            //         //timer.Interval = 1;
+            //         //timer.Enabled = true;
+            //     }
+            // }
 
-        
-       // private static string fillOneLabele( List<string> stringList, int number)
-       // {
-       //     for (int i = 0; i < stringList.Count; i++)
-       //     {   if(number == i)
-       //         return stringList[i];
-       //     }
-       //     return "";
+
+            // private static string fillOneLabele( List<string> stringList, int number)
+            // {
+            //     for (int i = 0; i < stringList.Count; i++)
+            //     {   if(number == i)
+            //         return stringList[i];
+            //     }
+            //     return "";
+       
+            sortTextBoxValue(this);
+
         }
+        private static String CheckIfNull(String str)
+        {
+            if (String.IsNullOrEmpty(str))
+                str = "0";
+            return str;
+        }
+        private static void sortTextBoxValue(Control parent)
+        {
+            List<TextBox> textBoxs = new List<TextBox>();
+            List<Label> labels = new List<Label>();
+            foreach (Control c in parent.Controls)
+            {
+                if (c.GetType() == typeof(TextBox))
+                {
+                    c.Text = CheckIfNull(c.Text);
+                    textBoxs.Add((TextBox)c);
+                }
+                if (c.GetType() == typeof(Label))
+                {
+                    labels.Add((Label)c);
+                 }
+                if (c.GetType() == typeof(GroupBox))
+                    sortTextBoxValue(c);
+            }
+            textBoxs = sortTextBox(textBoxs);
+            fillLabeles(labels, textBoxs);
+            textBoxs = null;
+            labels = null;
+        }
+        private static void fillLabeles(List<Label> labels, List<TextBox> textBoxs)
+        {
+            for (int i = 0; i < labels.Count; i++)
+            {
+                //  await Task.Delay(1000);
+                labels[i].BackColor = Color.Yellow;
+                labels[i].Text = textBoxs[i].Text;
+            }
+        }
+
+        private static List<TextBox> sortTextBox(List<TextBox> textBoxs)
+        {
+            for (int i = 1; i < textBoxs.Count; i++)
+            {
+                int cur = Convert.ToInt32(textBoxs[i].Text);
+                int j = i;
+                while (j > 0 && cur < Convert.ToInt32(textBoxs[j - 1].Text))
+                {
+                    textBoxs[j].Text = textBoxs[j - 1].Text;
+                    j--;
+                }
+              //  await Task.Delay(1000);
+                textBoxs[j].Text = cur.ToString();
+            }
+            return textBoxs;
+        }
+
 
         private static void fillStrings(List<string> stringlist, List<TextBox> textBoxs)
         {

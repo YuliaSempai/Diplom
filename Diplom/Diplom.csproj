@@ -227,6 +227,27 @@
   <ItemGroup>
     <None Include="Resources\Начало.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимок экрана %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\220px-Merge_sort_animation2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\220px-Merge_sort_animation2_2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\280px-Insertion-sort-example-300px_1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bubble-sort-example-300px.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insertion-sort-o.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Бубл.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

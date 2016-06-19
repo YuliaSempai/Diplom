@@ -81,5 +81,77 @@ namespace Diplom
         {
             Application.Exit();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void groupBox1_MouseHover(object sender, EventArgs e)
+        {
+            groupBox1.BackColor = Color.Yellow;
+
+        }
+
+        private void Glavnay_MouseHover(object sender, EventArgs e)
+        {
+            groupBox1.BackColor = Color.Aquamarine;
+            groupBox2.BackColor = Color.Aquamarine;
+            groupBox3.BackColor = Color.Aquamarine;
+            groupBox4.BackColor = Color.Aquamarine;
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_MouseHover(object sender, EventArgs e)
+        {
+            groupBox2.BackColor = Color.Yellow;
+        }
+
+        private void groupBox3_MouseHover(object sender, EventArgs e)
+        {
+            groupBox3.BackColor = Color.Yellow;
+        }
+
+        private void groupBox4_MouseHover(object sender, EventArgs e)
+        {
+            groupBox4.BackColor = Color.Yellow;
+        }
+
+        private void Glavnay_MouseMove(object sender, MouseEventArgs e)
+        {
+            groupBox1.BackColor = Color.Aquamarine;
+            groupBox2.BackColor = Color.Aquamarine;
+            groupBox3.BackColor = Color.Aquamarine;
+            groupBox4.BackColor = Color.Aquamarine;
+        }
+
+        private void groupBox2_Move(object sender, EventArgs e)
+        {
+            groupBox2.BackColor = Color.Yellow;
+        }
+
+        private void button3_MouseMove(object sender, MouseEventArgs e)
+        {
+            groupBox1.BackColor = Color.Yellow;
+        }
+
+        private void button4_MouseMove(object sender, MouseEventArgs e)
+        {
+            groupBox2.BackColor = Color.Yellow;
+        }
+
+        private void button5_MouseMove(object sender, MouseEventArgs e)
+        {
+            groupBox3.BackColor = Color.Yellow;
+        }
+
+        private void button6_MouseMove(object sender, MouseEventArgs e)
+        {
+            groupBox4.BackColor = Color.Yellow;
+        }
     }
 }

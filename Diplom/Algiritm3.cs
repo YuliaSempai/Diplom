@@ -139,20 +139,15 @@ namespace Diplom
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
+                private void groupBox1_Enter(object sender, EventArgs e)
         {
-
         }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
+                private void textBox3_TextChanged(object sender, EventArgs e)
         {
             textBox3.MaxLength = 3;
         }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
+                private void textBox4_TextChanged(object sender, EventArgs e)
         {
             textBox4.MaxLength = 3;
         }
@@ -171,7 +166,6 @@ namespace Diplom
         {
             {
                 sortTextBoxValue(this);
-
             }
         }
         private static String CheckIfNull(String str)
@@ -195,7 +189,6 @@ namespace Diplom
                 if (c.GetType() == typeof(Label))
                 {
                     labels.Add((Label)c);
-
                 }
                 if (c.GetType() == typeof(GroupBox))
                     sortTextBoxValue(c);
