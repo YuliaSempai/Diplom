@@ -41,8 +41,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(760, 340);
             this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "дтдлтррлрврасронавсрмдонкнв\nсдгазшлриморпгшплп\nсгсгнангпггн8н8\nуокоопнонозщошукшо" +
-    "узаьіхкшйукщо\nлвіо мщцкрп\n";
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // Histori2
             // 

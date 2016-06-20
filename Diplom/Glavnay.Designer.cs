@@ -93,7 +93,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(258, 149);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Сортировка слиянием";
+            this.button4.Text = "Сортировка злиттям";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button4_MouseMove);
@@ -108,7 +108,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(258, 149);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Сортировка выбором";
+            this.button5.Text = "Сортировка вибором";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             this.button5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button5_MouseMove);
@@ -151,7 +151,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(258, 149);
             this.button6.TabIndex = 11;
-            this.button6.Text = "Сортировка  пузирьком";
+            this.button6.Text = "Сортировка  бульбашкю";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button6_MouseMove);
@@ -168,6 +168,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             this.groupBox1.MouseHover += new System.EventHandler(this.groupBox1_MouseHover);
+            this.groupBox1.Move += new System.EventHandler(this.groupBox1_Move);
             // 
             // pictureBox1
             // 
@@ -213,7 +214,9 @@
             this.groupBox3.Size = new System.Drawing.Size(270, 550);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             this.groupBox3.MouseHover += new System.EventHandler(this.groupBox3_MouseHover);
+            this.groupBox3.Move += new System.EventHandler(this.groupBox3_Move);
             // 
             // pictureBox3
             // 
@@ -234,7 +237,9 @@
             this.groupBox4.Size = new System.Drawing.Size(270, 550);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             this.groupBox4.MouseHover += new System.EventHandler(this.groupBox4_MouseHover);
+            this.groupBox4.Move += new System.EventHandler(this.groupBox4_Move);
             // 
             // pictureBox4
             // 

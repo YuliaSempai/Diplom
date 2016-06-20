@@ -73,7 +73,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(200, 85);
             this.button10.TabIndex = 11;
-            this.button10.Text = "История";
+            this.button10.Text = "Довідка";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -108,7 +108,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button3.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.button3.Location = new System.Drawing.Point(15, 20);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -129,7 +129,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(200, 85);
             this.button4.TabIndex = 15;
-            this.button4.Text = "очистить";
+            this.button4.Text = "Очистити";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 

@@ -93,12 +93,12 @@ namespace Diplom
 
         private void button4_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Clear();
+            textBox1.Text = null;
+            textBox2.Text = null;
+            textBox3.Text = null;
+            textBox4.Text = null;
+            textBox5.Text = null;
+            textBox6.Text = null;
             label6.Text = null;
             label3.Text = null;
             label1.Text = null;
@@ -128,128 +128,160 @@ namespace Diplom
         }
 
         private async void button2_Click(object sender, EventArgs e)
-        { 
+        {
+            List<TextBox> textBoxs = new List<TextBox>();
+            List<Label> labels = new List<Label>();
 
-       //     sortTextBoxValue(this);
+            textBoxs.Add(textBox1);
+            textBoxs.Add(textBox2);
+            textBoxs.Add(textBox3);
 
-            // }
-            // private static String CheckIfNull(String str)
-            // {
-            //     if (String.IsNullOrEmpty(str))
-            //         str = "0";
-            //     return str;
+            textBoxs.Add(textBox4);
+            textBoxs.Add(textBox5);
+            textBoxs.Add(textBox6);
 
-            // }
-            //private static void sortTextBoxValue(Control parent)
-            // {
-            //     List<TextBox> textBoxs= new List<TextBox>();
-            //     List<String> stringlist = new List<String>();
-            //     List<Label> labels = new List<Label>();
-            //     foreach (Control c in parent.Controls)
-            //     {
-            //         if (c.GetType() == typeof(TextBox))
-            //         {
-            //             c.Text = CheckIfNull(c.Text);
-            //             textBoxs.Add((TextBox)c);
-            //             stringlist.Add("");
-            //         }
-            //         //if (c.GetType() == typeof(Label))
-            //         //{   labels.Add((Label)c);
-            //         //}
-            //         if (c.GetType() == typeof(GroupBox))
-            //             sortTextBoxValue(c);
-            //     }
+            labels.Add(label1);
+            labels.Add(label2);
+            labels.Add(label3);
 
-            //     fillStrings(stringlist, textBoxs);
-            //     stringlist = sortStrings(stringlist);
-            //     labels = sortLabels(labels);
-            //     fillLabeles(labels, stringlist);
-            //     textBoxs = null;
-            //     labels = null;
-            // }
-            // //void timer_Ticker(object sender , EventArgs e)
-            // //{
-            // //    labels[i].Text = fillOneLabele(stringList, i);
-            // //}
+            labels.Add(label4);
+            labels.Add(label5);
+            labels.Add(label6);
 
-            // private static void fillLabeles(List<Label> labels, List<string> stringList)
-            // {
-            //     for (int i = 0; i < labels.Count; i++)
-            //     {
-            //         labels[i].Text = fillOneLabele(stringList, i);
-            //         //System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+         
+           for(int i = 0; i<6; i++)
+            {
+                labels[i].Text = textBoxs[i].Text;
+            }
+            labels[0].BackColor = Color.Aqua;
+            for (int j = 1; j < labels.Count; j++)
+            {
+                labels[j].BackColor = Color.Yellow;
+                await Task.Delay(500);
+                int key = Convert.ToInt32(labels[j].Text);
 
-
-            //         //timer.Interval = 1;
-            //         //timer.Enabled = true;
-            //     }
-            // }
-
-
-            // private static string fillOneLabele( List<string> stringList, int number)
-            // {
-            //     for (int i = 0; i < stringList.Count; i++)
-            //     {   if(number == i)
-            //         return stringList[i];
-            //     }
-            //     return "";
-       
-            sortTextBoxValue(this);
-
+                int i = j - 1;
+                while ((i >= 0) && (Convert.ToInt32(labels[i].Text) > key))
+                {
+                   // labels[i+1].BackColor = Color.Red;
+                    labels[i].ForeColor = Color.Red;
+                    labels[i + 1].Text = labels[i].Text;
+                    labels[i].Text = key.ToString();
+                    
+                    await Task.Delay(500);
+                    //labels[i + 1].BackColor = Color.Aquamarine;
+                    labels[i].ForeColor = Color.Black;
+                    i = i - 1;
+                }
+                labels[j].BackColor = Color.Aqua;
+            }
+                  
+      
+        textBoxs = null;
+            labels = null;
         }
         private static String CheckIfNull(String str)
         {
             if (String.IsNullOrEmpty(str))
+            {
                 str = "0";
+            }
+              
             return str;
         }
-        private static void sortTextBoxValue(Control parent)
+        public static void sortTextBoxValue(Control parent)
         {
             List<TextBox> textBoxs = new List<TextBox>();
             List<Label> labels = new List<Label>();
-            foreach (Control c in parent.Controls)
-            {
-                if (c.GetType() == typeof(TextBox))
-                {
-                    c.Text = CheckIfNull(c.Text);
-                    textBoxs.Add((TextBox)c);
-                }
-                if (c.GetType() == typeof(Label))
-                {
-                    labels.Add((Label)c);
-                 }
-                if (c.GetType() == typeof(GroupBox))
-                    sortTextBoxValue(c);
-            }
-            textBoxs = sortTextBox(textBoxs);
-            fillLabeles(labels, textBoxs);
+            //textBoxs.Add(textBox1);
+
+            //fillLabeles(labels, textBoxs);
+            //labels = sortTextBox(labels);
             textBoxs = null;
             labels = null;
+            //foreach (Control c in parent.Controls)
+            //{
+            //    if (c.GetType() == typeof(TextBox))
+            //    {
+            //        c.Text = CheckIfNull(c.Text);
+            //        textBoxs.Add((TextBox)c);
+            //        MessageBox.Show(textBoxs[Int32.Parse(textBoxs.Count.ToString()) - 1].ToString());
+            //    }
+            //    if (c.GetType() == typeof(Label))
+            //    {
+            //        labels.Add((Label)c);
+            //    }
+            //    if (c.GetType() == typeof(GroupBox))
+            //        sortTextBoxValue(c);
+            //}
+
+            //textBoxs = sortTextBox(textBoxs);
+
         }
         private static void fillLabeles(List<Label> labels, List<TextBox> textBoxs)
         {
-            for (int i = 0; i < labels.Count; i++)
-            {
-                //  await Task.Delay(1000);
-                labels[i].BackColor = Color.Yellow;
-                labels[i].Text = textBoxs[i].Text;
-            }
+        //    if (textBoxs.Count > labels.Count)
+        //    {
+        //        labels.Add(new Label());
+        //    }
+        //    else
+        //    {
+        //        textBoxs.Add(new TextBox());
+        //    }
+        //    for (int i = 0; i < labels.Count; i++)
+        //    {
+          MessageBox.Show("hey"+textBoxs.Count+" "+labels.Count);
+        //        //  await Task.Delay(1000);
+        //       // labels[i].BackColor = Color.Yellow;
+        //        labels[i].Text = textBoxs[i].Text;
+        //   }
         }
 
-        private static List<TextBox> sortTextBox(List<TextBox> textBoxs)
+        private static List<Label> sortTextBox(List<Label> textBoxs)
         {
-            for (int i = 1; i < textBoxs.Count; i++)
+            if (textBoxs.Count > 0&&textBoxs!=null)
             {
-                int cur = Convert.ToInt32(textBoxs[i].Text);
-                int j = i;
-                while (j > 0 && cur < Convert.ToInt32(textBoxs[j - 1].Text))
+                //MessageBox.Show(textBoxs.Count.ToString());
+                int[] intArr = new int[6];
+                for (int i = 0; i < textBoxs.Count; i++)
                 {
-                    textBoxs[j].Text = textBoxs[j - 1].Text;
-                    j--;
+                    int n = Convert.ToInt32(textBoxs[i].Text);
+                    MessageBox.Show(n.ToString());
+                    intArr[i] = Convert.ToInt32(textBoxs[i].Text);
                 }
-              //  await Task.Delay(1000);
-                textBoxs[j].Text = cur.ToString();
+                for (int j = 1; j < intArr.Length; j++)
+                {
+                    int key = intArr[j];
+                    int i = j - 1;
+                    while ((i > 0) && (intArr[i] > key))
+                    {
+                        intArr[i + 1] = intArr[i];
+                        i = i - 1;
+                        intArr[i + 1] = key;
+                    }
+                }
+                for (int i = 0; i < textBoxs.Count; i++)
+                {
+                    textBoxs[i].Text = intArr[i].ToString();
+                }
             }
+           
+    //            for j = 2 to A.length
+    //key = A[j]
+    //i = j - 1
+    //while i > 0 and A[i] > key
+    //     A[i + 1] = A[i]
+    //     i = i - 1
+    //A[i + 1] = key
+                       //    int j = i;
+                       //    while (j > 0 && cur < Convert.ToInt32(textBoxs[j - 1].Text))
+                       //    {
+                       //        textBoxs[j].Text = textBoxs[j - 1].Text;
+                       //        j--;
+                       //    }
+
+            //    textBoxs[j].Text = cur.ToString();
+            //}
             return textBoxs;
         }
 

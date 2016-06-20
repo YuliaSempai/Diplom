@@ -41,8 +41,9 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(760, 340);
             this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "дтдлтррлрврасронавсрмдонкнв\nсдгазшлриморпгшплп\nсгсгнангпггн8н8\nуокоопнонозщошукшо" +
-    "узаьіхкшйукщо\nлвіо мщцкрп\n";
+            this.richTextBox1.Text = "Сортування бульбашкою (англ. Bubble sort) - простий алгоритм сортування. Для розу" +
+    "міння і реалізації цей алгоритм - найпростіший, але ефективний він лише для неве" +
+    "ликих масивів.\n";
             // 
             // Histori4
             // 

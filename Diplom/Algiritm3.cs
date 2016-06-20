@@ -118,15 +118,94 @@ namespace Diplom
                 e.Handled = true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
-            //найти меньшее значение
-            //вывести меньшее значение
-            //заблокировать его
-            // зациклить программу
+
+            List<TextBox> textBoxs = new List<TextBox>();
+            List<Label> labels = new List<Label>();
+
+            textBoxs.Add(textBox1);
+            textBoxs.Add(textBox2);
+            textBoxs.Add(textBox3);
+            textBoxs.Add(textBox4);
+            textBoxs.Add(textBox5);
+            textBoxs.Add(textBox6);
+
+            labels.Add(label1);
+            labels.Add(label2);
+            labels.Add(label3);
+            labels.Add(label4);
+            labels.Add(label5);
+            labels.Add(label6);
+
+            List<int> intList = new List<int>();
+            for(int u = 0; u < textBoxs.Count; u++)
+            {
+                intList.Add(Convert.ToInt32(textBoxs[u].Text));
+                labels[u].Text=textBoxs[u].Text;
+                labels[u].BackColor = Color.Yellow;
+                await Task.Delay(500);
+                labels[u].BackColor = Color.Aquamarine;
+            }
+            for(int i=0; i<labels.Count; i++)
+            {
+                
+                int min = intList[0];
+                for (int j=0; j < intList.Count; j++)
+                {
+                   
+                 if (min>intList[j])
+                    {
+                        //labels[i].Text = intList[j].ToString();
+                        //intList.Remove(intList[j]);
+
+                        min = intList[j];
+                       
+                    }
+                    
+                }
+                labels[i].BackColor = Color.Red;
+                await Task.Delay(500);
+                labels[i].Text = min.ToString();
+                labels[i].ForeColor = Color.White;
+                intList.Remove(min);
+                labels[i].BackColor = Color.Aquamarine;
+
+            }
+            for(int i = 0; i<labels.Count; i++)
+            {
+                labels[i].ForeColor = Color.Black;
+            }
+            ////    public static List<int> Selection(List<int> list)
+            ////{
+            ////List<TextBox> textBoxs = new List<TextBox>();
+            ////List<Label> labels = new List<Label>();
+            ////textBoxs = sortTextBox(textBoxs);
+            ////fillLabeles(labels, textBoxs);
+            ////    for (int i = 0; i < list.Count - 1; i++)
+            ////    {
+            ////        int min = i;
+            ////        for (int j = i + 1; j < list.Count; j++)
+            ////        {
+            ////            if (list[j] < list[min])
+            ////            {
+
+            ////                min = j;
+
+            //    Вывод чисед
+
+            ////            }
+            ////        }
+            ////        int dummy = list[i];
+            ////        list[i] = list[min];
+            ////        list[min] = dummy;
+            ////    }
+            ////    return list; }
         }
+         
 
         
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             textBox1.MaxLength = 3;
@@ -164,9 +243,9 @@ namespace Diplom
 
         private void Algiritm3_Load(object sender, EventArgs e)
         {
-            {
-                sortTextBoxValue(this);
-            }
+            //{
+            //    sortTextBoxValue(this);
+            //}
         }
         private static String CheckIfNull(String str)
         {
@@ -175,7 +254,7 @@ namespace Diplom
             return str;
 
         }
-        private static void sortTextBoxValue(Control parent)
+        private static void takeListsValue(Control parent)
         {
             List<TextBox> textBoxs = new List<TextBox>();
             List<Label> labels = new List<Label>();
@@ -191,13 +270,13 @@ namespace Diplom
                     labels.Add((Label)c);
                 }
                 if (c.GetType() == typeof(GroupBox))
-                    sortTextBoxValue(c);
+                    takeListsValue(c);
             }
 
-            //textBoxs = sortTextBox(textBoxs);
+           // textBoxs = sortTextBox(textBoxs);
            // fillLabeles(labels, textBoxs);
-            textBoxs = null;
-            labels = null;
+          //  textBoxs = null;
+          //  labels = null;
         }
         private static void fillLabeles(List<Label> labels, List<TextBox> textBoxs)
         {

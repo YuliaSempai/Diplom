@@ -32,6 +32,21 @@ namespace Diplom
             label4.Text = null;
             label5.Text = null;
             label6.Text = null;
+
+            label1.BackColor = Color.Aquamarine;
+            label2.BackColor = Color.Aquamarine;
+            label3.BackColor = Color.Aquamarine;
+            label4.BackColor = Color.Aquamarine;
+            label5.BackColor = Color.Aquamarine;
+            label6.BackColor = Color.Aquamarine;
+
+            label1.ForeColor = Color.Black;
+            label2.ForeColor = Color.Black;
+            label3.ForeColor = Color.Black;
+            label4.ForeColor = Color.Black;
+            label5.ForeColor = Color.Black;
+            label6.ForeColor = Color.Black;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -134,7 +149,7 @@ namespace Diplom
                     {
                         // labelArg[i].ForeColor = Color.Blue;
                         // labelArg[i + 1].ForeColor = Color.Red;
-                        await Task.Delay(1000);
+                      //  await Task.Delay(1000);
                         buf = arrTaxtBox[i];
                         arrTaxtBox[i] = arrTaxtBox[i + 1];
                         arrTaxtBox[i + 1] = buf;
@@ -144,17 +159,26 @@ namespace Diplom
                     }
                     for (int j = 0; j < labelArg.Count; j++)
                     {
-                        labelArg[i].ForeColor = Color.Blue;
-                        labelArg[i + 1].ForeColor = Color.Yellow;
+                        labelArg[i].BackColor = Color.Blue;
+                        labelArg[i].ForeColor = Color.White;
+                        labelArg[i + 1].ForeColor = Color.Orange;
+                        labelArg[i + 1].BackColor = Color.Yellow;
                         labelArg[j].Text = arrTaxtBox[j].ToString();
+                        await Task.Delay(100);
+                        
+                        labelArg[i].BackColor = Color.Aquamarine;
+                        labelArg[i].ForeColor = Color.Black;
+                       
                     }
+                  
 
 
-                
-                    await Task.Delay(1000);
+                    //await Task.Delay(1000);
+                    labelArg[i + 1].ForeColor = Color.White;
+                    labelArg[i + 1].BackColor = Color.Lime;
                 }
-                //labelArg[0].BackColor = Color.Olive;
-                // labelArg[0].ForeColor = Color.Red;
+                labelArg[0].ForeColor = Color.White;
+                labelArg[0].BackColor = Color.Lime;
             }
            
         }
